@@ -52,4 +52,4 @@ This is a purely front-end project and does not require any build tools or depen
 * **Tamer Ghazi** - Full Stack Developer
 * [GitHub Profile](https://github.com/Tamergh96)
 * [LinkedIn Profile](https://www.linkedin.com/in/tamerghazi/)
-* [Personal Portfolio](https://github.com/Tamergh96)
+* [Personal Portfolio](https://tghazi.netlify.app)
