@@ -46,10 +46,11 @@ html {
    ========================================= */
 .button {
   background-color: var(--primary_color);
-  border-radius: 2rem;
-  width: 10rem;
-  height: 6rem;
+  width: 13rem !important;
+  height: 5rem;
   font-size: 1rem;
+  color:white;
+  margin-top: 2rem;
 }
 
 .register_button {
