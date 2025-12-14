@@ -37,16 +37,6 @@ This is a purely front-end project and does not require any build tools or depen
 
 ---
 
-## 🖼️ Screenshots / Preview
-
-*(Remember to replace the bracketed text below with links to your actual images, or host the images in your repo and link them locally!)*
-
-| Desktop View | Mobile View |
-| :---: | :---: |
-| [Insert Link to Desktop Image] | [Insert Link to Mobile Image] |
-
----
-
 ## 🙋‍♂️ Author
 
 * **Tamer Ghazi** - Full Stack Developer
