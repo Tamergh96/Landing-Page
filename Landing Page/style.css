@@ -118,6 +118,37 @@ html {
   font-weight: bold;
 }
 
+/** Burger Menu */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 28px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
 /* =========================================
    4. HERO SECTION
    ========================================= */
@@ -718,5 +749,30 @@ html {
 
   .footer__send-btn {
     right: 1rem;
+  }
+
+  .burger {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    z-index: 20000;
+  }
+
+  .navigation {
+    width: 100%;
+  }
+
+  .navigation_list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .navigation_list.active {
+    display: flex;
   }
 }
