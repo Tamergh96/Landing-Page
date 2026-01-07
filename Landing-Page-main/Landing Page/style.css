@@ -1,0 +1,276 @@
+/* ==========================================================================
+   TABLE OF CONTENTS
+   1. Variables & Reset
+   2. Global Components
+   3. Header & Navigation
+   4. Hero Section
+   5. Clients Section
+   6. Features Section
+   7. Content Block
+   8. Stats Section
+   9. Story Section
+   10. Blog Section
+   11. CTA Section
+   12. Footer Section
+   13. Media Queries
+   ========================================================================== */
+
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+:root {
+  --primary_color: #28CB8B;
+  --secondary_color: #26323B;
+  --silver: #F5F7FA;
+  --button_color: #4CAF4F;
+  --text_dark: #4D4D4D;
+  --text_light: #717171;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   2. GLOBAL COMPONENTS
+   ========================================= */
+.register_button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2.5rem;
+  background: var(--button_color);
+  color: #fff;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: .3s;
+}
+
+.register_button:hover {
+  background: #4ddb9f;
+}
+
+/* =========================================
+   3. HEADER & NAVIGATION
+   ========================================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30000;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.logo {
+  width: 7rem;
+}
+
+.navigation_list {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.navigation_list a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.6rem;
+}
+
+/* Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 28px;
+  height: 3px;
+  background: #000;
+  transition: .3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+.about_us {
+  background: var(--silver);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10rem 4rem;
+}
+
+.hero_container h1 {
+  font-size: 6rem;
+}
+
+.hero_container p {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+/* =========================================
+   5. CLIENTS
+   ========================================= */
+.clients {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.clients_photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+/* =========================================
+   6. FEATURES
+   ========================================= */
+.features {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.features_photos {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   7. CONTENT
+   ========================================= */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 4rem;
+}
+
+.content_image img {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* =========================================
+   8. STATS
+   ========================================= */
+.stats {
+  background: var(--silver);
+  padding: 6rem 2rem;
+}
+
+/* =========================================
+   9. STORY
+   ========================================= */
+.story {
+  background: var(--silver);
+  padding: 6rem 2rem;
+}
+
+/* =========================================
+   10. BLOG
+   ========================================= */
+.blog {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+/* =========================================
+   11. CTA
+   ========================================= */
+.cta {
+  background: var(--silver);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+/* =========================================
+   12. FOOTER
+   ========================================= */
+.footer {
+  background: var(--secondary_color);
+  color: #fff;
+  padding: 6rem 2rem;
+}
+
+/* =========================================
+   13. MEDIA QUERIES (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Burger visible */
+  .burger {
+    display: flex;
+  }
+
+  /* Mobile navigation overlay */
+  .navigation {
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transform: translateY(-120%);
+    transition: transform .3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  }
+
+  .navigation.active {
+    transform: translateY(0);
+  }
+
+  .navigation_list {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    gap: 2.5rem;
+  }
+
+  .navigation_list a {
+    font-size: 2rem;
+  }
+
+  /* Hero */
+  .about_us {
+    flex-direction: column-reverse;
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+}
